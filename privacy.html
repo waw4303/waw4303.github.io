@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Політика конфіденційності — CakeDay</title>
+  <meta name="description" content="Політика конфіденційності застосунку CakeDay для Android.">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+      max-width: 46rem;
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1a1c1e;
+      background: #f4f7fc;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #eee; background: #001f36; }
+      a { color: #4dd0e1; }
+      table { border-color: #1e4d7b !important; }
+      th { background: #002845 !important; }
+    }
+    h1 { margin: 0 0 .5rem; font-size: 1.9rem; }
+    h2 { margin: 2.25rem 0 .75rem; font-size: 1.2rem; }
+    h3 { margin: 1.5rem 0 .5rem; font-size: 1rem; }
+    .meta { color: #5a6472; font-size: .9rem; margin: 0 0 2rem; }
+    @media (prefers-color-scheme: dark) { .meta { color: #81d4fa; } }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+    th, td { border: 1px solid #d5dee9; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+    th { background: #e7eef8; font-weight: 600; }
+    code { background: rgba(128,128,128,.15); padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
+    hr { margin: 3.5rem 0 2rem; border: 0; border-top: 1px solid #d5dee9; }
+    @media (prefers-color-scheme: dark) { hr { border-color: #1e4d7b; } }
+  </style>
+</head>
+<body>
+
+  <h1>Політика конфіденційності</h1>
+  <p class="meta">Застосунок <strong>CakeDay</strong> (<code>com.smartreminders.app</code>) для Android<br>
+  Чинна з 17 вересня 2026 року</p>
+
+  <p>Ця політика пояснює, які дані обробляє застосунок CakeDay, де вони зберігаються і хто має до них доступ. Ми намагалися написати її так, щоб її можна було прочитати без юридичної освіти.</p>
+
+  <h2>Коротко</h2>
+  <ul>
+    <li>Усі дані, які ви вносите, зберігаються <strong>на вашому пристрої</strong>.</li>
+    <li>У нас <strong>немає серверів</strong>, куди ці дані надсилаються. Ми не маємо до них доступу.</li>
+    <li>Ми <strong>не продаємо</strong> і не передаємо ваші дані третім особам.</li>
+    <li>Застосунок <strong>не використовує аналітику</strong> й не відстежує вашу поведінку.</li>
+    <li>Резервна копія створюється лише за вашою згодою і лише <strong>у ваш власний Google Drive</strong>.</li>
+  </ul>
+
+  <h2>Які дані ви вносите</h2>
+
+  <p>Застосунок працює з даними, які ви додаєте самостійно або імпортуєте з телефонної книги:</p>
+
+  <table>
+    <tr><th>Тип даних</th><th>Що саме</th></tr>
+    <tr><td>Контакти</td><td>Ім'я, фото (аватар), група, нотатки</td></tr>
+    <tr><td>Події</td><td>День народження, річниця, інша дата та її тип</td></tr>
+    <tr><td>Завдання</td><td>Назва, опис, термін, пріоритет</td></tr>
+    <tr><td>Список подарунків</td><td>Назва, ціна, посилання, нотатки</td></tr>
+    <tr><td>Налаштування</td><td>Час нагадувань, тема оформлення, мова</td></tr>
+  </table>
+
+  <p>Усе це зберігається у локальній базі даних на пристрої. Видалення застосунку видаляє ці дані.</p>
+
+  <h2>Дозволи та навіщо вони</h2>
+
+  <table>
+    <tr><th>Дозвіл</th><th>Призначення</th></tr>
+    <tr><td><code>READ_CONTACTS</code></td><td>Щоб імпортувати дні народження з телефонної книги за вашим запитом. Імпортовані дані залишаються на пристрої й нікуди не надсилаються. Дозвіл необов'язковий — ви можете вносити контакти вручну.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Щоб показувати нагадування про події.</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Щоб відновити розклад нагадувань після перезавантаження телефона.</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>VIBRATE</code></td><td>Щоб нагадування спрацьовувало вчасно й могло вібрувати.</td></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Для показу реклами, резервного копіювання та перевірки покупок.</td></tr>
+    <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберігати файл резервної копії на пристрій, коли ви обираєте експорт.</td></tr>
+    <tr><td><code>com.android.vending.BILLING</code></td><td>Для оформлення підписки CakeDay Pro.</td></tr>
+  </table>
+
+  <h2>Резервне копіювання у Google Drive</h2>
+
+  <p>Функція резервного копіювання <strong>вимкнена за замовчуванням</strong>. Якщо ви її увімкнете й увійдете у свій обліковий запис Google, застосунок створить копію ваших даних у <strong>вашому власному</strong> Google Drive, у прихованій папці даних застосунку.</p>
+
+  <ul>
+    <li>Ми не маємо доступу до вашого Google Drive і не бачимо вміст копії.</li>
+    <li>Копію можна видалити будь-коли — як із застосунку, так і через налаштування Google Drive.</li>
+    <li>Застосунок не читає жодних інших файлів на вашому диску.</li>
+  </ul>
+
+  <h2>Реклама</h2>
+
+  <p>Безкоштовна версія застосунку показує рекламу через <strong>Google AdMob</strong>. Для показу реклами Google може збирати та обробляти:</p>
+
+  <ul>
+    <li>рекламний ідентифікатор пристрою (Advertising ID);</li>
+    <li>технічні дані про пристрій і застосунок;</li>
+    <li>приблизне місцезнаходження, визначене за IP-адресою.</li>
+  </ul>
+
+  <p>Ці дані обробляє Google відповідно до власної політики конфіденційності: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</p>
+
+  <p>Ви можете керувати персоналізацією реклами в налаштуваннях Android: <em>Налаштування → Google → Реклама</em>. Там можна скинути або вимкнути рекламний ідентифікатор.</p>
+
+  <p>Користувачі з підпискою <strong>CakeDay Pro</strong> рекламу не бачать.</p>
+
+  <h2>Покупки</h2>
+
+  <p>Підписка CakeDay Pro оформлюється через <strong>Google Play Billing</strong>. Платіж повністю обробляє Google — ми <strong>не отримуємо</strong> і не зберігаємо дані вашої банківської картки. Ми бачимо лише факт наявності активної підписки, щоб відкрити відповідні функції.</p>
+
+  <h2>Чого ми не робимо</h2>
+
+  <ul>
+    <li>Не збираємо статистику використання застосунку.</li>
+    <li>Не використовуємо сторонніх аналітичних або трекінгових бібліотек.</li>
+    <li>Не передаємо і не продаємо ваші дані третім особам.</li>
+    <li>Не надсилаємо ваші контакти, дати чи нотатки на жоден сервер.</li>
+  </ul>
+
+  <h2>Діти</h2>
+
+  <p>Застосунок не призначений для дітей молодших 13 років і не збирає свідомо їхні персональні дані.</p>
+
+  <h2>Ваші права та видалення даних</h2>
+
+  <p>Ви контролюєте свої дані повністю:</p>
+
+  <ul>
+    <li><strong>Видалити окремий запис</strong> — безпосередньо в застосунку.</li>
+    <li><strong>Видалити все</strong> — видаліть застосунок; локальна база даних буде стерта разом із ним.</li>
+    <li><strong>Видалити резервну копію</strong> — у налаштуваннях свого Google Drive або через застосунок.</li>
+  </ul>
+
+  <p>Оскільки ми не зберігаємо ваших даних на своїх серверах, нам нема чого видаляти на ваш запит — усе вже знаходиться під вашим контролем.</p>
+
+  <h2>Зміни до цієї політики</h2>
+
+  <p>Якщо політика зміниться, ми оновимо дату вгорі цієї сторінки. Суттєві зміни будуть показані в застосунку.</p>
+
+  <h2>Контакти</h2>
+
+  <p>З питань конфіденційності пишіть: <a href="mailto:waw4303@gmail.com">waw4303@gmail.com</a></p>
+
+  <hr>
+
+  <h1 id="english">Privacy Policy (English)</h1>
+  <p class="meta">CakeDay (<code>com.smartreminders.app</code>) for Android — effective 17 September 2026</p>
+
+  <p>CakeDay stores everything you enter <strong>locally on your device</strong>. We operate no servers and have no access to your data. We do not sell or share your data, and the app contains no analytics or tracking libraries.</p>
+
+  <h3>Data you enter</h3>
+  <p>Names, photos, groups and notes for contacts; birthdays, anniversaries and other dates; tasks; gift list items; app settings. All of it lives in a local database and is deleted when you uninstall the app.</p>
+
+  <h3>Permissions</h3>
+  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one. <code>com.android.vending.BILLING</code> handles the CakeDay Pro subscription.</p>
+
+  <h3>Google Drive backup</h3>
+  <p>Off by default. If you enable it and sign in, your data is copied to a hidden app folder in <strong>your own</strong> Google Drive. We cannot access your Drive or read the backup. You can delete it at any time.</p>
+
+  <h3>Advertising</h3>
+  <p>The free version shows ads through <strong>Google AdMob</strong>, which may collect your device advertising ID, technical device and app data, and coarse location derived from your IP address, under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. You can reset or disable your advertising ID in Android settings under <em>Settings → Google → Ads</em>. CakeDay Pro subscribers see no ads.</p>
+
+  <h3>Purchases</h3>
+  <p>The CakeDay Pro subscription is processed entirely by <strong>Google Play Billing</strong>. We never receive or store your card details; we only see whether a subscription is active.</p>
+
+  <h3>Children</h3>
+  <p>The app is not intended for children under 13, and we do not knowingly collect their personal data.</p>
+
+  <h3>Your rights</h3>
+  <p>Delete individual entries in the app, or uninstall it to erase all local data. Delete your backup through Google Drive or the app. Since we hold no data on our servers, there is nothing for us to delete on your behalf.</p>
+
+  <h3>Contact</h3>
+  <p><a href="mailto:waw4303@gmail.com">waw4303@gmail.com</a></p>
+
+</body>
+</html>

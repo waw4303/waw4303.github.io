@@ -38,7 +38,7 @@
 
   <h1>Політика конфіденційності</h1>
   <p class="meta">Застосунок <strong>CakeDay</strong> (<code>com.smartreminders.app</code>) для Android<br>
-  Чинна з 17 вересня 2026 року</p>
+  Чинна з 19 вересня 2026 року</p>
 
   <p>Ця політика пояснює, які дані обробляє застосунок CakeDay, де вони зберігаються і хто має до них доступ. Ми намагалися написати її так, щоб її можна було прочитати без юридичної освіти.</p>
 
@@ -72,21 +72,22 @@
     <tr><th>Дозвіл</th><th>Призначення</th></tr>
     <tr><td><code>READ_CONTACTS</code></td><td>Щоб імпортувати дні народження з телефонної книги за вашим запитом. Імпортовані дані залишаються на пристрої й нікуди не надсилаються. Дозвіл необов'язковий — ви можете вносити контакти вручну.</td></tr>
     <tr><td><code>POST_NOTIFICATIONS</code></td><td>Щоб показувати нагадування про події.</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Щоб нагадування про події, дні народження та щоденні завдання спрацьовували гарантовано точно в обрану вами хвилину, навіть під час режиму енергозбереження (Doze).</td></tr>
     <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Щоб відновити розклад нагадувань після перезавантаження телефона.</td></tr>
     <tr><td><code>WAKE_LOCK</code>, <code>VIBRATE</code></td><td>Щоб нагадування спрацьовувало вчасно й могло вібрувати.</td></tr>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Для показу реклами, резервного копіювання та перевірки покупок.</td></tr>
-    <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберігати файл резервної копії на пристрій, коли ви обираєте експорт.</td></tr>
+    <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберігати файл резервної копії на пристрій, коли ви обираєте експорт (для Android 9 і нижче).</td></tr>
     <tr><td><code>com.android.vending.BILLING</code></td><td>Для оформлення підписки CakeDay Pro.</td></tr>
   </table>
 
   <h2>Резервне копіювання у Google Drive</h2>
 
-  <p>Функція резервного копіювання <strong>вимкнена за замовчуванням</strong>. Якщо ви її увімкнете й увійдете у свій обліковий запис Google, застосунок створить копію ваших даних у <strong>вашому власному</strong> Google Drive, у прихованій папці даних застосунку.</p>
+  <p>Функція резервного копіювання <strong>вимкнена за замовчуванням</strong>. Якщо ви її увімкнете й увійдете у свій обліковий запис Google, застосунок створить копію ваших даних у <strong>вашому власному</strong> Google Drive у видимій папці «Smart Reminders» (використовуючи дозвіл <code>drive.file</code>, обмежений лише файлами, створеними застосунком).</p>
 
   <ul>
     <li>Ми не маємо доступу до вашого Google Drive і не бачимо вміст копії.</li>
-    <li>Копію можна видалити будь-коли — як із застосунку, так і через налаштування Google Drive.</li>
-    <li>Застосунок не читає жодних інших файлів на вашому диску.</li>
+    <li>Папка та резервна копія видимі у вашому Google Drive — ви можете переглянути або видалити їх будь-коли через застосунок або безпосередньо в Google Drive.</li>
+    <li>Застосунок не читає і не змінює жодних інших файлів на вашому диску.</li>
   </ul>
 
   <h2>Реклама</h2>
@@ -129,7 +130,7 @@
   <ul>
     <li><strong>Видалити окремий запис</strong> — безпосередньо в застосунку.</li>
     <li><strong>Видалити все</strong> — видаліть застосунок; локальна база даних буде стерта разом із ним.</li>
-    <li><strong>Видалити резервну копію</strong> — у налаштуваннях свого Google Drive або через застосунок.</li>
+    <li><strong>Видалити резервну копію</strong> — у налаштуваннях свого Google Drive (папка «Smart Reminders») або через застосунок.</li>
   </ul>
 
   <p>Оскільки ми не зберігаємо ваших даних на своїх серверах, нам нема чого видаляти на ваш запит — усе вже знаходиться під вашим контролем.</p>
@@ -145,7 +146,7 @@
   <hr>
 
   <h1 id="english">Privacy Policy (English)</h1>
-  <p class="meta">CakeDay (<code>com.smartreminders.app</code>) for Android — effective 17 September 2026</p>
+  <p class="meta">CakeDay (<code>com.smartreminders.app</code>) for Android — effective 19 September 2026</p>
 
   <p>CakeDay stores everything you enter <strong>locally on your device</strong>. We operate no servers and have no access to your data. We do not sell or share your data, and the app contains no analytics or tracking libraries.</p>
 
@@ -153,10 +154,10 @@
   <p>Names, photos, groups and notes for contacts; birthdays, anniversaries and other dates; tasks; gift list items; app settings. All of it lives in a local database and is deleted when you uninstall the app.</p>
 
   <h3>Permissions</h3>
-  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one. <code>com.android.vending.BILLING</code> handles the CakeDay Pro subscription.</p>
+  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code> and <code>SCHEDULE_EXACT_ALARM</code> (to trigger birthday and task alerts at the exact minute specified, even during device Doze mode) deliver reminders reliably. <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time and restore them after reboot. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one (on Android 9 and below). <code>com.android.vending.BILLING</code> handles the CakeDay Pro subscription.</p>
 
   <h3>Google Drive backup</h3>
-  <p>Off by default. If you enable it and sign in, your data is copied to a hidden app folder in <strong>your own</strong> Google Drive. We cannot access your Drive or read the backup. You can delete it at any time.</p>
+  <p>Off by default. If you enable it and sign in, your data is backed up to a visible folder named "Smart Reminders" in <strong>your own</strong> Google Drive (using the <code>drive.file</code> scope, restricted strictly to files created by the app). We cannot access your Drive or read other files. You can view or delete the backup folder at any time directly in Google Drive or via the app.</p>
 
   <h3>Advertising</h3>
   <p>The free version shows ads through <strong>Google AdMob</strong>, which may collect your device advertising ID, technical device and app data, and coarse location derived from your IP address, under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. You can reset or disable your advertising ID in Android settings under <em>Settings → Google → Ads</em>. CakeDay Pro subscribers see no ads.</p>
@@ -168,7 +169,7 @@
   <p>The app is not intended for children under 13, and we do not knowingly collect their personal data.</p>
 
   <h3>Your rights</h3>
-  <p>Delete individual entries in the app, or uninstall it to erase all local data. Delete your backup through Google Drive or the app. Since we hold no data on our servers, there is nothing for us to delete on your behalf.</p>
+  <p>Delete individual entries in the app, or uninstall it to erase all local data. Delete your backup folder ("Smart Reminders") through Google Drive or the app. Since we hold no data on our servers, there is nothing for us to delete on your behalf.</p>
 
   <h3>Contact</h3>
   <p><a href="mailto:waw4303@gmail.com">waw4303@gmail.com</a></p>

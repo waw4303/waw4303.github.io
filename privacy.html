@@ -80,7 +80,7 @@
     <tr><td><code>WAKE_LOCK</code>, <code>VIBRATE</code></td><td>Щоб нагадування спрацьовувало вчасно й могло вібрувати.</td></tr>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Для показу реклами, резервного копіювання та перевірки покупок.</td></tr>
     <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберігати файл резервної копії на пристрій, коли ви обираєте експорт (для Android 9 і нижче).</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Для оформлення підписки CakeDay Pro.</td></tr>
+    <tr><td><code>com.android.vending.BILLING</code></td><td>Для оформлення разової покупки CakeDay Pro.</td></tr>
   </table>
 
   <h2>Резервне копіювання у Google Drive</h2>
@@ -107,11 +107,11 @@
 
   <p>Ви можете керувати персоналізацією реклами в налаштуваннях Android: <em>Налаштування → Google → Реклама</em>. Там можна скинути або вимкнути рекламний ідентифікатор.</p>
 
-  <p>Користувачі з підпискою <strong>CakeDay Pro</strong> рекламу не бачать.</p>
+  <p>Користувачі, які придбали <strong>CakeDay Pro</strong>, рекламу не бачать.</p>
 
   <h2>Покупки</h2>
 
-  <p>Підписка CakeDay Pro оформлюється через <strong>Google Play Billing</strong>. Платіж повністю обробляє Google — ми <strong>не отримуємо</strong> і не зберігаємо дані вашої банківської картки. Ми бачимо лише факт наявності активної підписки, щоб відкрити відповідні функції.</p>
+  <p>Покупка CakeDay Pro — <strong>разова</strong> (не підписка), оформлюється через <strong>Google Play Billing</strong>. Платіж повністю обробляє Google — ми <strong>не отримуємо</strong> і не зберігаємо дані вашої банківської картки. Ми бачимо лише факт наявності покупки, щоб відкрити відповідні функції.</p>
 
   <h2>Чого ми не робимо</h2>
 
@@ -157,16 +157,16 @@
   <p>Names, photos, groups and notes for contacts; birthdays, anniversaries and other dates; tasks; gift list items; app settings. All of it lives in a local database and is deleted when you uninstall the app.</p>
 
   <h3>Permissions</h3>
-  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code> and <code>SCHEDULE_EXACT_ALARM</code> (to trigger birthday and task alerts at the exact minute specified, even during device Doze mode) deliver reminders reliably. <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time and restore them after reboot. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one (on Android 9 and below). <code>com.android.vending.BILLING</code> handles the CakeDay Pro subscription.</p>
+  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code> and <code>SCHEDULE_EXACT_ALARM</code> (to trigger birthday and task alerts at the exact minute specified, even during device Doze mode) deliver reminders reliably. <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time and restore them after reboot. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one (on Android 9 and below). <code>com.android.vending.BILLING</code> handles the one-time CakeDay Pro purchase.</p>
 
   <h3>Google Drive backup</h3>
   <p>Off by default. If you enable it and sign in, your data is backed up to a visible folder named "Smart Reminders" in <strong>your own</strong> Google Drive (using the <code>drive.file</code> scope, restricted strictly to files created by the app). We cannot access your Drive or read other files. You can view or delete the backup folder at any time directly in Google Drive or via the app.</p>
 
   <h3>Advertising</h3>
-  <p>The free version shows ads through <strong>Google AdMob</strong>, which may collect your device advertising ID, technical device and app data, and coarse location derived from your IP address, under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. You can reset or disable your advertising ID in Android settings under <em>Settings → Google → Ads</em>. CakeDay Pro subscribers see no ads.</p>
+  <p>The free version shows ads through <strong>Google AdMob</strong>, which may collect your device advertising ID, technical device and app data, and coarse location derived from your IP address, under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. You can reset or disable your advertising ID in Android settings under <em>Settings → Google → Ads</em>. CakeDay Pro owners see no ads.</p>
 
   <h3>Purchases</h3>
-  <p>The CakeDay Pro subscription is processed entirely by <strong>Google Play Billing</strong>. We never receive or store your card details; we only see whether a subscription is active.</p>
+  <p>CakeDay Pro is a <strong>one-time purchase</strong>, not a subscription, and is processed entirely by <strong>Google Play Billing</strong>. We never receive or store your card details; we only see whether the purchase is present.</p>
 
   <h3>Children</h3>
   <p>The app is not intended for children under 13, and we do not knowingly collect their personal data.</p>

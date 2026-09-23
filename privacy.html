@@ -79,7 +79,7 @@
     <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Щоб відновити розклад нагадувань після перезавантаження телефона.</td></tr>
     <tr><td><code>WAKE_LOCK</code>, <code>VIBRATE</code></td><td>Щоб нагадування спрацьовувало вчасно й могло вібрувати.</td></tr>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Для показу реклами, резервного копіювання та перевірки покупок.</td></tr>
-    <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберігати файл резервної копії на пристрій, коли ви обираєте експорт (для Android 9 і нижче).</td></tr>
+    <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Щоб зберегти листівку-привітання у вашу галерею (для Android 9 і нижче).</td></tr>
     <tr><td><code>com.android.vending.BILLING</code></td><td>Для оформлення разової покупки CakeDay Pro.</td></tr>
   </table>
 
@@ -157,7 +157,7 @@
   <p>Names, photos, groups and notes for contacts; birthdays, anniversaries and other dates; tasks; gift list items; app settings. All of it lives in a local database and is deleted when you uninstall the app.</p>
 
   <h3>Permissions</h3>
-  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code> and <code>SCHEDULE_EXACT_ALARM</code> (to trigger birthday and task alerts at the exact minute specified, even during device Doze mode) deliver reminders reliably. <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time and restore them after reboot. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves an export file when you ask for one (on Android 9 and below). <code>com.android.vending.BILLING</code> handles the one-time CakeDay Pro purchase.</p>
+  <p><code>READ_CONTACTS</code> is used only to import birthdays from your phone book at your request, and is optional. <code>POST_NOTIFICATIONS</code> and <code>SCHEDULE_EXACT_ALARM</code> (to trigger birthday and task alerts at the exact minute specified, even during device Doze mode) deliver reminders reliably. <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code> and <code>VIBRATE</code> deliver reminders on time and restore them after reboot. <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> support ads, backup and purchase checks. <code>WRITE_EXTERNAL_STORAGE</code> saves a greeting card to your gallery when you ask for one (on Android 9 and below). <code>com.android.vending.BILLING</code> handles the one-time CakeDay Pro purchase.</p>
 
   <h3>Google Drive backup</h3>
   <p>Off by default. If you enable it and sign in, your data is backed up to a visible folder named "CakeDay" in <strong>your own</strong> Google Drive (using the <code>drive.file</code> scope, restricted strictly to files created by the app). We cannot access your Drive or read other files. You can view or delete the backup folder at any time directly in Google Drive or via the app.</p>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — Aylin</title>
+  <meta name="description" content="Aylin Terms of Use — Select language">
+  <script>
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var loc = 'en';
+      if (lang.startsWith('uk')) { loc = 'uk'; }
+      else if (lang.startsWith('ru')) { loc = 'ru'; }
+      else if (lang.startsWith('de')) { loc = 'de'; }
+      else if (lang.startsWith('es')) { loc = 'es'; }
+      else if (lang.startsWith('pt')) { loc = 'pt-BR'; }
+      else if (lang.startsWith('fr')) { loc = 'fr'; }
+      else if (lang.startsWith('it')) { loc = 'it'; }
+      else if (lang.startsWith('pl')) { loc = 'pl'; }
+      else if (lang.startsWith('tr')) { loc = 'tr'; }
+      window.location.replace(loc + '/');
+    })();
+  </script>
+  <style>
+
+:root {
+  --primary-rose: #C84666;
+  --primary-rose-hover: #AF3754;
+  --bg-cream: #FFFBF9;
+  --bg-card: #FFFFFF;
+  --text-dark: #2B2326;
+  --text-muted: #6B5B60;
+  --border-soft: #F1D6DD;
+  --badge-bg: #FDEEF2;
+  --badge-text: #A82C4B;
+  --line-height: 1.65;
+  --max-width: 860px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: var(--line-height);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(200, 70, 102, 0.05);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-rose);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-badge {
+  font-size: 0.75rem;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary-rose);
+}
+
+.lang-select-wrapper {
+  position: relative;
+}
+
+.lang-select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.lang-select:focus {
+  border-color: var(--primary-rose);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 32px auto 64px auto;
+  padding: 0 20px;
+}
+
+.legal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(200, 70, 102, 0.04);
+}
+
+@media (max-width: 600px) {
+  .legal-card {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+  .header-container {
+    padding: 12px 16px;
+  }
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 0;
+  color: var(--primary-rose);
+  border-bottom: 2px solid var(--border-soft);
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.45rem;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+}
+
+p {
+  margin-bottom: 1.2em;
+  color: var(--text-dark);
+}
+
+ul, ol {
+  margin: 0 0 1.4em 1.5em;
+}
+
+li {
+  margin-bottom: 0.45em;
+}
+
+li > ul, li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-soft);
+  margin: 32px 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--primary-rose);
+  background-color: var(--bg-cream);
+  padding: 12px 20px;
+  margin: 0 0 1.4em 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--primary-rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--primary-rose-hover);
+}
+
+strong {
+  font-weight: 600;
+  color: #1A1315;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  border-bottom: none;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.feature-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.feature-box h3 {
+  margin-top: 0;
+  color: var(--primary-rose);
+  font-size: 1.15rem;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-rose);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-rose-hover);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  border: 1px solid var(--border-soft);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-rose);
+  color: var(--primary-rose);
+}
+
+  .lang-grid {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .lang-grid li a {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    background: var(--bg-cream);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .lang-grid li a:hover {
+    border-color: var(--primary-rose);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200, 70, 102, 0.08);
+  }
+  .lang-native {
+    font-weight: 600;
+    color: var(--primary-rose);
+    font-size: 1.05rem;
+  }
+  .lang-en {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="../" class="brand-link">
+        Aylin
+        <span class="brand-badge">Period Tracker</span>
+      </a>
+      <div class="nav-links">
+        <a href="../privacy/" >Privacy Policy</a>
+        <a href="../terms/" class="active">Terms of Use</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="legal-card">
+      <h1>Terms of Use</h1>
+      <p style="margin-top: 16px; font-size: 1.05rem; color: var(--text-dark);">
+        Select your language / Оберіть мову / Bitte wählen Sie Ihre Sprache:
+      </p>
+      <ul class="lang-grid">
+        <li><a href="en/"><span class="lang-native">English</span> <span class="lang-en">(English)</span></a></li>
+        <li><a href="uk/"><span class="lang-native">Українська</span> <span class="lang-en">(Ukrainian)</span></a></li>
+        <li><a href="ru/"><span class="lang-native">Русский</span> <span class="lang-en">(Russian)</span></a></li>
+        <li><a href="de/"><span class="lang-native">Deutsch</span> <span class="lang-en">(German)</span></a></li>
+        <li><a href="es/"><span class="lang-native">Español</span> <span class="lang-en">(Spanish)</span></a></li>
+        <li><a href="pt-BR/"><span class="lang-native">Português (Brasil)</span> <span class="lang-en">(Portuguese (Brazil))</span></a></li>
+        <li><a href="fr/"><span class="lang-native">Français</span> <span class="lang-en">(French)</span></a></li>
+        <li><a href="it/"><span class="lang-native">Italiano</span> <span class="lang-en">(Italian)</span></a></li>
+        <li><a href="pl/"><span class="lang-native">Polski</span> <span class="lang-en">(Polish)</span></a></li>
+        <li><a href="tr/"><span class="lang-native">Türkçe</span> <span class="lang-en">(Turkish)</span></a></li>
+      </ul>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 24px; border-top: 1px solid var(--border-soft); padding-top: 16px;">
+        Automatic redirection is active. If your browser does not redirect you automatically within a few seconds, please choose your language from the list above.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aylin. Package: <code>com.aylin.periodtracker</code>. All rights reserved.</p>
+  </footer>
+</body>
+</html>

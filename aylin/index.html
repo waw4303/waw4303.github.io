@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aylin — Private Period & Cycle Tracker</title>
+  <meta name="description" content="Aylin is a private, intuitive period tracker and menstrual cycle calendar. No account required, on-device encrypted storage.">
+  <style>
+
+:root {
+  --primary-rose: #C84666;
+  --primary-rose-hover: #AF3754;
+  --bg-cream: #FFFBF9;
+  --bg-card: #FFFFFF;
+  --text-dark: #2B2326;
+  --text-muted: #6B5B60;
+  --border-soft: #F1D6DD;
+  --badge-bg: #FDEEF2;
+  --badge-text: #A82C4B;
+  --line-height: 1.65;
+  --max-width: 860px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: var(--line-height);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(200, 70, 102, 0.05);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-rose);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-badge {
+  font-size: 0.75rem;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary-rose);
+}
+
+.lang-select-wrapper {
+  position: relative;
+}
+
+.lang-select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.lang-select:focus {
+  border-color: var(--primary-rose);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 32px auto 64px auto;
+  padding: 0 20px;
+}
+
+.legal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(200, 70, 102, 0.04);
+}
+
+@media (max-width: 600px) {
+  .legal-card {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+  .header-container {
+    padding: 12px 16px;
+  }
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 0;
+  color: var(--primary-rose);
+  border-bottom: 2px solid var(--border-soft);
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.45rem;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+}
+
+p {
+  margin-bottom: 1.2em;
+  color: var(--text-dark);
+}
+
+ul, ol {
+  margin: 0 0 1.4em 1.5em;
+}
+
+li {
+  margin-bottom: 0.45em;
+}
+
+li > ul, li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-soft);
+  margin: 32px 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--primary-rose);
+  background-color: var(--bg-cream);
+  padding: 12px 20px;
+  margin: 0 0 1.4em 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--primary-rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--primary-rose-hover);
+}
+
+strong {
+  font-weight: 600;
+  color: #1A1315;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  border-bottom: none;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.feature-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.feature-box h3 {
+  margin-top: 0;
+  color: var(--primary-rose);
+  font-size: 1.15rem;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-rose);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-rose-hover);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  border: 1px solid var(--border-soft);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-rose);
+  color: var(--primary-rose);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="./" class="brand-link">
+        Aylin
+        <span class="brand-badge">Period Tracker</span>
+      </a>
+      <div class="nav-links">
+        <a href="privacy/">Privacy Policy</a>
+        <a href="terms/">Terms of Use</a>
+        <div class="lang-select-wrapper">
+          <select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Select language">
+<option value="privacy/en/">English</option>
+<option value="privacy/uk/">Українська</option>
+<option value="privacy/ru/">Русский</option>
+<option value="privacy/de/">Deutsch</option>
+<option value="privacy/es/">Español</option>
+<option value="privacy/pt-BR/">Português (Brasil)</option>
+<option value="privacy/fr/">Français</option>
+<option value="privacy/it/">Italiano</option>
+<option value="privacy/pl/">Polski</option>
+<option value="privacy/tr/">Türkçe</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Aylin: Period & Cycle Tracker</h1>
+      <p>A private, intuitive menstrual cycle calendar designed to help you understand your body with confidence. 100% on-device encryption, zero tracking servers, and complete user ownership.</p>
+      
+      <div class="cta-group">
+        <a href="privacy/" class="btn btn-primary">Privacy Policy</a>
+        <a href="terms/" class="btn btn-outline">Terms of Use</a>
+      </div>
+    </section>
+
+    <div class="features-grid">
+      <div class="feature-box">
+        <h3>100% Private & Offline</h3>
+        <p>No account required. All health logs are encrypted locally with hardware-backed SQLCipher (AES-256) and never leave your phone without your permission.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Health Connect Integration</h3>
+        <p>Optional two-way synchronization with Google Health Connect. Keep periods, temperature, and weight in sync across your trusted apps with granular permissions.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Personal Cycle Insights</h3>
+        <p>Discover patterns in your own logged data—recurring symptom timing, luteal phase correlations, and cycle regularity without invasive analytics.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Guided Breathing Exercises</h3>
+        <p>Relaxation breathing techniques (Calm 4-6, Box breathing, 4-7-8) with smooth haptics and responsive animations to ease premenstrual stress.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>App Lock & Disguise</h3>
+        <p>Protect your diary with biometric authentication or a custom PIN. Switch your launcher icon to a neutral disguise (Notes, Calendar, Weather).</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>12 Color Themes</h3>
+        <p>Personalize your experience with 12 handcrafted color palettes, including battery-friendly dark theme.</p>
+      </div>
+    </div>
+
+    <div class="legal-card" style="margin-top: 30px; text-align: center;">
+      <h2 style="border-bottom: none; margin-top: 0;">Legal & Transparency Documents</h2>
+      <p style="margin-bottom: 24px; color: var(--text-muted);">Aylin is committed to radical transparency and strict compliance with global privacy standards.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <strong>Privacy Policy:</strong>
+          <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+            <a href="privacy/en/">EN</a> ·
+            <a href="privacy/uk/">UK</a> ·
+            <a href="privacy/ru/">RU</a> ·
+            <a href="privacy/de/">DE</a> ·
+            <a href="privacy/es/">ES</a> ·
+            <a href="privacy/pt-BR/">PT-BR</a> ·
+            <a href="privacy/fr/">FR</a> ·
+            <a href="privacy/it/">IT</a> ·
+            <a href="privacy/pl/">PL</a> ·
+            <a href="privacy/tr/">TR</a>
+          </div>
+        </div>
+
+        <div>
+          <strong>Terms of Use:</strong>
+          <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+            <a href="terms/en/">EN</a> ·
+            <a href="terms/uk/">UK</a> ·
+            <a href="terms/ru/">RU</a> ·
+            <a href="terms/de/">DE</a> ·
+            <a href="terms/es/">ES</a> ·
+            <a href="terms/pt-BR/">PT-BR</a> ·
+            <a href="terms/fr/">FR</a> ·
+            <a href="terms/it/">IT</a> ·
+            <a href="terms/pl/">PL</a> ·
+            <a href="terms/tr/">TR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aylin. Package: <code>com.aylin.periodtracker</code>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
